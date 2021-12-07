@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import { Paper } from '@mui/material';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import AddTask from './Components/AddTask';
+import TaskForm from './Components/TaskForm';
+import TaskHeader from './Components/TaskHeader';
+import RootReducer from './Reducers/RootReducer';
 import './App.css';
 
+
+
+
 function App() {
+
+  const store = createStore(RootReducer)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Paper className="App" elevation={5}>
+      <TaskHeader />
+      <TaskForm />
+      <AddTask />
+    </Paper >
+    </Provider >
   );
 }
 
