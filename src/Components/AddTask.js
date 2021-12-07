@@ -8,9 +8,8 @@ import toast, { Toaster } from 'react-hot-toast'
 
 const AddTask = () => {
     
-    const message = <p>Hey yall. This task tracker app is basically a todo app with a little bit more finesse.
-        It helps you keep track of what you want to do, check it out when done, and delete it when
-        it is not essential to you anymore.</p>
+    const message = <p>Hey y'all. This task tracker app is basically a todo app with a little bit more finesse.
+        It helps you keep track of your stuff.</p>
     
     const states = useSelector(state => state.todos)
     const clearAllTodos = useSelector(state => state.clearAllTodos)
@@ -39,7 +38,7 @@ const AddTask = () => {
                     <Checkbox />
                 </div>
             ))}
-            <div mt={6} className='footer'>
+            <Box mt={6} className='footer'>
                 <Button color="primary" onClick={() => dispatch(clearAllAction(clearAllTodos))}>
                     Clear All
                 </Button>  
@@ -53,7 +52,7 @@ const AddTask = () => {
                     About App
                 </Button>
              
-            </div>
+            </Box>
         </Box>
     )
 }
