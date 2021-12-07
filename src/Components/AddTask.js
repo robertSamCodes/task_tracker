@@ -18,10 +18,14 @@ const AddTask = () => {
     const notify = () => {
        toast( message ,
   {
-      duration: 10000,
+      duration: 5000,
       style: {
+           position:"bottom-center",
           textTransform: 'Capitalize',
-          fontWeight: 'normal'
+          fontWeight: 'normal',
+          backgroundColor: '#1976d2',
+          color: '#ffffff',
+          lineHeight: '1.50em'
       }
   }
 );
@@ -42,16 +46,10 @@ const AddTask = () => {
                 <Button color="primary" onClick={() => dispatch(clearAllAction(clearAllTodos))}>
                     Clear All
                 </Button>  
-                {/* <Routes> */}
-                    {/* <Route path="/"> */}
-                        {/* <AboutApp /> */}
-                    {/* </Route> */}
-                {/* </Routes> */}
                 <Button color="primary" onClick={()=>notify()}>
                     <Toaster />
                     About App
                 </Button>
-             
             </Box>
         </Box>
     )
