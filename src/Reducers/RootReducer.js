@@ -22,6 +22,11 @@ const RootReducer = (state = stateStore, action) => {
                 ...state,
                 todos: []
             }
+        case "REMOVE_TASK":
+            return {
+                ...state,
+                todos: state.todos.filter((todo, index) => index !== action.payload)
+            }
         default:
             return state
     }

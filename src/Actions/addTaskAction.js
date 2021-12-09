@@ -17,4 +17,11 @@ export const clearAllAction = (clearAll) => {
         type: "CLEAR_ALL",
         payload: clearAll
     }
-} 
+}
+
+export const removeTask = (index) => {
+    return {
+        type: "REMOVE_TASK",
+        payload: index
+    }
+}

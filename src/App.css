@@ -80,7 +80,7 @@
 }
 
 .task:nth-child(even) {
-	background-color: #fafafe;
+	background-color: #f1f1f1;
 }
 
 small {
