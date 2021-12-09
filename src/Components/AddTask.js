@@ -26,7 +26,7 @@ const AddTask = () => {
   {
       duration: 5000,
       style: {
-           position:"bottom-center",
+           position: "bottomCenter",
           textTransform: 'Capitalize',
           fontWeight: 'normal',
           backgroundColor: '#1976d2',
