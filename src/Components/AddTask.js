@@ -48,7 +48,8 @@ const AddTask = () => {
                     <div className="task" key={index}>
                         <p>{initialTask}</p>
                         {/* <small style={{ marginTop: -20 }}>{initialTask.initialDate}</small> */}
-                        <div className="closeBtn" onClick={()=>dispatch(removeTask(index))}
+                        <div className="closeBtn"
+                            onClick={() => window.confirm(`Are you sure you want to remove " ${initialTask} " ?`) && dispatch(removeTask(index))}
                         >&times;</div>
                         <Checkbox />
                     </div>
