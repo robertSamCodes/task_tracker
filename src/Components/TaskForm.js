@@ -26,6 +26,7 @@ const TaskForm = () => {
 		setTodos("");
 		setDates("");
 	};
+
 	return isClosed ? (
 		<FormControl className="text_field_container">
 			<TextField
@@ -59,7 +60,6 @@ const TaskForm = () => {
 				<Typography>Set Reminder</Typography>
 				<Checkbox />
 			</Box>
-
 			<Button
 				onClick={() => handleDispatch()}
 				disabled={
