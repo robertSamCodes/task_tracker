@@ -55,7 +55,8 @@
 	padding: 10px;
 }
 
-.task {
+.checked,
+.unchecked {
 	display: grid;
 	grid-template-columns: 9fr 0.5fr 0.5fr;
 	/* background-color: aqua; */
@@ -68,6 +69,11 @@
 	/* font-weight: 500; */
 }
 
+.unchecked {
+	text-decoration: line-through;
+	opacity: 0.3;
+	font-style: italic;
+}
 .authorImage {
 	height: auto;
 	width: auto;
