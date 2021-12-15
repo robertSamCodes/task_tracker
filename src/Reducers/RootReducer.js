@@ -33,6 +33,7 @@ const RootReducer = (state = stateStore, action) => {
 			return {
 				...state,
 				isChecked: !state.isChecked,
+				// isChecked: state.todos.map()
 			};
 		case "CLEAR_ALL":
 			return {

@@ -22,13 +22,12 @@ const AddTask = () => {
 	);
 
 	const states = useSelector((state) => state.todos);
-	const date = useSelector((state) => state.todos);
-	console.log(date.todos);
+	console.log(states.task);
+
 	const clearAllTodos = useSelector(
 		(state) => state.clearAllTodos
 	);
 	const isChecked = useSelector((state) => state.isChecked);
-	console.log("Checked", isChecked);
 	const dispatch = useDispatch();
 
 	const notify = () => {
