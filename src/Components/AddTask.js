@@ -69,7 +69,7 @@ const AddTask = () => {
 							className="closeBtn"
 							onClick={() =>
 								window.confirm(
-									`Are you sure you want to remove " ${initialTask} " ?`
+									`Are you sure you want to remove " ${initialTask.task} " ?`
 								) && dispatch(removeTask(index))
 							}
 						>
