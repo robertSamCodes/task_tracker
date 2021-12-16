@@ -15,7 +15,6 @@ const TaskForm = () => {
 	const isClosed = useSelector((state) => state.isClosed);
 	const [todos, setTodos] = useState("");
 	const [dates, setDates] = useState("");
-	console.log(dates);
 
 	const handleChange = (e) => setTodos(e.target.value);
 

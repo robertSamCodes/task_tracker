@@ -6,7 +6,6 @@ const stateStore = {
 		// },
 	],
 	isClosed: true,
-	isChecked: false,
 	clearAllTodos: [],
 };
 
@@ -15,7 +14,7 @@ const RootReducer = (state = stateStore, action) => {
 		case "ADD_TASK":
 			return {
 				...state,
-				// todos: [...state.todos, action.payload]
+
 				todos: [
 					...state.todos,
 					{
@@ -29,12 +28,7 @@ const RootReducer = (state = stateStore, action) => {
 				...state,
 				isClosed: !state.isClosed,
 			};
-		case "IS_CHECKED":
-			return {
-				...state,
-				isChecked: !state.isChecked,
-				// isChecked: state.todos.map()
-			};
+
 		case "CLEAR_ALL":
 			return {
 				...state,

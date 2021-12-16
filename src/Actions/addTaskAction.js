@@ -25,10 +25,3 @@ export const removeTask = (index) => {
 		payload: index,
 	};
 };
-
-export const toggleCheck = (check) => {
-	return {
-		type: "IS_CHECKED",
-		payload: !check,
-	};
-};

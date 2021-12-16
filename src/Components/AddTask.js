@@ -1,13 +1,9 @@
-import {
-	Button,
-	Checkbox,
-	Typography,
-} from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { useSelector } from "react-redux";
 import { clearAllAction } from "../Actions/addTaskAction";
-import { toggleCheck } from "../Actions/addTaskAction";
+
 import { removeTask } from "../Actions/addTaskAction";
 import { useDispatch } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
@@ -27,7 +23,7 @@ const AddTask = () => {
 	const clearAllTodos = useSelector(
 		(state) => state.clearAllTodos
 	);
-	const isChecked = useSelector((state) => state.isChecked);
+
 	const dispatch = useDispatch();
 
 	const notify = () => {
@@ -59,12 +55,9 @@ const AddTask = () => {
 				</Typography>
 			) : (
 				states.map((initialTask, index) => (
-					<div
-						className={isChecked ? "unchecked" : "checked"}
-						key={index}
-					>
+					<div className="checked" key={index}>
 						<p>{initialTask.task}</p>
-
+						{console.log(states)}
 						<div
 							className="closeBtn"
 							onClick={() =>
@@ -75,11 +68,7 @@ const AddTask = () => {
 						>
 							&times;
 						</div>
-						<Checkbox
-							onClick={() =>
-								dispatch(toggleCheck(!isChecked))
-							}
-						/>
+
 						<small style={{ marginTop: -10 }}>
 							{initialTask.date}
 						</small>

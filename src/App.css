@@ -58,7 +58,7 @@
 .checked,
 .unchecked {
 	display: grid;
-	grid-template-columns: 9fr 0.5fr 0.5fr;
+	grid-template-columns: 9fr 1fr;
 	/* background-color: aqua; */
 	align-items: baseline;
 	font-size: 18px;
@@ -80,7 +80,7 @@
 }
 
 .closeBtn {
-	font-size: 30px;
+	font-size: 40px;
 	cursor: pointer;
 	/* align-self: baseline; */
 }
