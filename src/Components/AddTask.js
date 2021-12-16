@@ -77,9 +77,12 @@ const AddTask = () => {
 			)}
 			<Box mt={6} className="footer">
 				<Button
+					disabled={states.length === 0 ? true : false}
 					color="primary"
 					onClick={() =>
-						dispatch(clearAllAction(clearAllTodos))
+						window.confirm(
+							"Are you sure you want to remove all tasks?"
+						) && dispatch(clearAllAction(clearAllTodos))
 					}
 				>
 					Clear All
